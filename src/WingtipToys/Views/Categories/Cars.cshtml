@@ -1,0 +1,12 @@
+﻿@*@using WingtipToys.Models*@
+
+@model List<WingtipToys.Models.Product>
+
+<h3>I'm a cars view</h3>
+
+<ul>
+@foreach(var car in Model)
+{
+    <li>@car.ProductName <a href="/Categories/Details/@car.ProductId">Details</a></li> 
+}
+</ul>

@@ -1,0 +1,14 @@
+﻿@model WingtipToys.Models.Product
+
+<h3>Here are some dang ol' details man</h3>
+
+<h2>@Model.ProductName</h2>
+<h4>@Model.Description</h4>
+
+<h4>$@Model.UnitPrice</h4>
+
+<form asp-controller="Cart" asp-action="Index" method="post">
+    @*@Html.HiddenFor(m => m.ProductId)*@
+    <input type="hidden" value="@Model.ProductId" name="ProductId" />
+    <button type="submit">BUY NOW</button>
+</form>
